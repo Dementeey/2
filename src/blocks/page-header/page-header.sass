@@ -1,8 +1,9 @@
 .page-header
   width: 100%
-  height: 100vh
+  height: 980px
   background-color: #5ca1f1
   position: relative
+  overflow: hidden
 
   &::before
     position: absolute
@@ -14,20 +15,44 @@
     background: url("../img/page-header/mask.svg") no-repeat 0 0
     background-size: contain
     opacity: 0.6
+    z-index: 0
 
   &__inner
     display: flex
-
+    flex-direction: column
 
 
   &__promo
+    margin-top: 250px
     width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    position: relative
+
+    &::before
+      content: url("../img/page-header/head.svg")
+      position: absolute
+      top: -50px
+      right: 0
 
 .promo__text
   margin: 0
+  align-self: center
+  max-width: 60%
+  height: 195px
+  color: #ffffff
+  font-size: 55px
+  font-weight: 300
+  position: relative
 
   &::before
-    content: ''
-
-  &::after
-    content: ''
+    content: '"'
+    //transform: rotate(-10deg)
+    transform: scaleX(-1)
+    position: absolute
+    top: -50px
+    left: 10px
+    font-style: italic
+    font-size: 55px
