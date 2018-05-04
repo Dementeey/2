@@ -1,0 +1,78 @@
+.about
+  background-color: #ffffff
+  padding-top: 125px
+  //width: 100%
+  //height: 600px
+  +whScreen(100%, 600px)
+
+  &__inner
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    position: relative
+
+  &__title
+    color: #383838
+    font-size: 29px
+    font-weight: 600
+
+  &__text
+    color: #848484
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+
+
+  &__btn-contact
+    margin-right: 20px
+
+  &__btn-more
+    background-color: #ffffff
+    color: #599cea
+
+.first-box,
+.second-box
+  width: 40%
+  display: flex
+  flex-direction: column
+  //position: relative
+
+.first-box::before
+  content: ''
+  width: 3px
+  height: 107px
+  background-color: #5ca1f1
+  opacity: .4
+  position: absolute
+  top: 50%
+  left: 55%
+  transform: translate(-55%, -50%)
+
+.btn-wrap
+  display: flex
+  flex-direction: row
+  margin-top: 38px
+
+.logos
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  list-style-type: none
+  width: 100%
+  padding: 0
+  margin: 140px 0 0 0
+
+  &__item
+    display: flex
+    width: 200px
+    height: 100px
+    background: url("../img/about/logos-sprite.png") no-repeat 18px 20px
+
+  &__item:nth-child(2)
+    background-position: -228px 19px
+  &__item:nth-child(3)
+    background-position: -486px 25px
+  &__item:nth-child(4)
+    background-position: -745px 25px
+  &__item:nth-child(5)
+    background-position: -1023px 25px
