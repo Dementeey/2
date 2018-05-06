@@ -23,7 +23,7 @@
       position: absolute
 
   &__sub-title
-    max-width: 40%
+    max-width: 50%
     color: #383838
     font-size: 29px
     font-weight: 600
@@ -34,12 +34,18 @@
     flex-direction: column
     align-content: center
     position: relative
-    width: 100%
+    width: 70vw
     margin-left: 10%
 
 
-   &_slide-1
-     display: flex
+  &__slide-1
+    display: flex
+
+  &__slide-2
+    display: none
+
+  &__slide-3
+    display: none
 
   &__text
     color: #848484
@@ -47,5 +53,27 @@
     font-weight: 400
     line-height: 26px
     width: 35%
+
+input[type=radio]
+  display: none
+s
+.slide-btn__wrap
+  width: 180px
+  position: absolute
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  bottom: -10%
+  left: 50%
+  transform: translate( -100%, 10%)
+
+.slide-btn
+  width: 49px
+  height: 5px
+  background-color: #c9cdd1
+  cursor: pointer
+
+input[type=radio]:checked .slide-btn
+  background-color: #5ca1f1
 
 
