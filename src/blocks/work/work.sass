@@ -37,16 +37,6 @@
     width: 70vw
     margin-left: 10%
 
-
-  &__slide-1
-    display: flex
-
-  &__slide-2
-    display: none
-
-  &__slide-3
-    display: none
-
   &__text
     color: #848484
     font-size: 16px
@@ -54,9 +44,16 @@
     line-height: 26px
     width: 35%
 
+
+#work__slider-1,
+#work__slider-2,
+#work__slider-3,
 input[type=radio]
   display: none
-s
+
+.slide-img
+  width: 65%
+
 .slide-btn__wrap
   width: 180px
   position: absolute
@@ -73,7 +70,20 @@ s
   background-color: #c9cdd1
   cursor: pointer
 
-input[type=radio]:checked .slide-btn
+#slide-1:checked ~ #work__slider-1,
+#slide-2:checked ~ #work__slider-2,
+#slide-3:checked ~ #work__slider-3
+  display: flex
+
+
+#work__slider-2
+  background-color: #f50049
+
+#work__slider-3
+  background-color: #00ffff
+
+
+#slide-1:checked ~ .slide-btn__wrap #slide-btn-1,
+#slide-2:checked ~ .slide-btn__wrap #slide-btn-2,
+#slide-3:checked ~ .slide-btn__wrap #slide-btn-3
   background-color: #5ca1f1
-
-
