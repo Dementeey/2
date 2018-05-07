@@ -1,0 +1,56 @@
+.page-footer
+  background-color: #00ffff
+  width: 100%
+  min-height: 211px
+  background-color: #599cea
+  &__wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 50px
+
+.copyright
+  opacity: 0.8
+  color: #ffffff
+  font-size: 18px
+  line-height: 1.5
+
+
+.social
+  margin: 0
+  padding: 0
+  list-style-type: none
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  min-width: 134px
+
+  &__item
+    width: 19px
+    height: 19px
+    border-radius: 50%
+    font-size: 0
+    background: url("../img/page-footer/social-sprite.svg") no-repeat
+    background-position: 0 0
+    background-size: cover
+    transition: .3s
+
+    &:nth-child(2)
+      background-position: -36px 0
+    &:nth-child(3)
+      background-position: -71px 0
+    &:nth-child(4)
+      background-position: -107px 0
+
+    &:hover
+      transform: scale(1.24)
+      transition: .4s
+      box-shadow: 0 1px 5px rgba(0,0,0, .5)
+
+  &__link
+    display: block
+    width: 100%
+    height: 100%
+    cursor: pointer
+    text-decoration: none

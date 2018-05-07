@@ -9,24 +9,26 @@
     display: flex
     justify-content: flex-start
     color: #383838
-    font-size: 29px
+    font-size: 55px
     font-weight: 600
     position: relative
+
 
     &::before
       content: ''
       width: 111px
       height: 4px
       background-color: #599cea
-      top: 45px
-      left: 68px
+      top: 79px
+      left: 230px
       position: absolute
 
   &__sub-title
-    max-width: 50%
+    max-width: 45%
     color: #383838
     font-size: 29px
     font-weight: 600
+    height: 70px
 
 
   &__slider
@@ -37,53 +39,58 @@
     width: 70vw
     margin-left: 10%
 
+
+
   &__text
     color: #848484
     font-size: 16px
     font-weight: 400
     line-height: 26px
     width: 35%
+    min-height: 420px
 
+
+  input[type=radio]
+    display: none
 
 #work__slider-1,
 #work__slider-2,
-#work__slider-3,
-input[type=radio]
+#work__slider-3
   display: none
+  flex-direction: column
 
-.slide-img
-  width: 65%
+#work__slider-1
+  background: url("../img/work/slide-1.png") no-repeat top right
+#work__slider-2
+  background: url("../img/work/slide-1.png") no-repeat top right
+#work__slider-3
+  background: url("../img/work/slide-1.png") no-repeat top right
 
-.slide-btn__wrap
+
+.work__slide-btn__wrap
   width: 180px
   position: absolute
   display: flex
   flex-direction: row
   justify-content: space-between
-  bottom: -10%
+  bottom: 30px
   left: 50%
   transform: translate( -100%, 10%)
 
-.slide-btn
+.work__slide-btn
   width: 49px
   height: 5px
   background-color: #c9cdd1
   cursor: pointer
+  transition: all .5s ease
 
-#slide-1:checked ~ #work__slider-1,
-#slide-2:checked ~ #work__slider-2,
-#slide-3:checked ~ #work__slider-3
+#work__slide-1:checked ~ #work__slider-1,
+#work__slide-2:checked ~ #work__slider-2,
+#work__slide-3:checked ~ #work__slider-3
   display: flex
 
-
-#work__slider-2
-  background-color: #f50049
-
-#work__slider-3
-  background-color: #00ffff
-
-
-#slide-1:checked ~ .slide-btn__wrap #slide-btn-1,
-#slide-2:checked ~ .slide-btn__wrap #slide-btn-2,
-#slide-3:checked ~ .slide-btn__wrap #slide-btn-3
+#work__slide-1:checked ~ .work__slide-btn__wrap #work__slide-btn-1,
+#work__slide-2:checked ~ .work__slide-btn__wrap #work__slide-btn-2,
+#work__slide-3:checked ~ .work__slide-btn__wrap #work__slide-btn-3
   background-color: #5ca1f1
+

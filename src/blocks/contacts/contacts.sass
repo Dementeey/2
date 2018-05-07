@@ -1,0 +1,49 @@
+.contacts
+  padding-top: 118px
+  padding-bottom: 176px
+
+  &__title
+    color: #333333
+    font-size: 55px
+    font-weight: 600
+    display: flex
+    justify-content: flex-start
+    color: #383838
+    font-size: 55px
+    font-weight: 600
+    position: relative
+
+    &::before
+      content: ''
+      width: 111px
+      height: 4px
+      background-color: #599cea
+      top: 79px
+      left: 110px
+      position: absolute
+
+  &__wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-left: 10%
+    margin-right: 20%
+
+  &__text
+    color: #383838
+    font-size: 29px
+    font-weight: 600
+    max-width: 60%
+
+  &__btn
+    line-height: 1.5
+    //width: 165px
+    align-self: center
+    position: relative
+    padding-right: 15%
+
+    &::after
+      content: url("../img/contacts/shape.svg")
+      position: absolute
+      top: 15px
+      right: 20%

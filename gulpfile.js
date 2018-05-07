@@ -21,7 +21,8 @@ const path = {
     css: 'build/css/',
     fonts: 'build/fonts/',
     img: 'build/img/',
-    svg: 'build/img/'
+    svg: 'build/img/',
+    video: 'build/video/'
   },
   src: {                                    // Пути откуда брать исходники
     html: 'src/*.html',                     // Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -29,8 +30,8 @@ const path = {
     style: 'src/sass/index.sass',
     fonts: 'src/fonts/**/*.*',
     img: 'src/blocks/**/*.+(png|jpg)',      // Синтаксис img/**/*.* означает - взять все файлы всех расширений
-    svg: 'src/blocks/**/*.svg'              // Синтаксис img/**/*.* означает - взять все файлы всех расширений
-                                            // из папки и из вложенных каталогов
+    svg: 'src/blocks/**/*.svg',             // Синтаксис img/**/*.* означает - взять все файлы всех расширений
+    video: 'src/video/*.+(mp4|mov)'                                // из папки и из вложенных каталогов
   },
   watch: {                                  // Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.html',
@@ -38,7 +39,8 @@ const path = {
     style: 'src/**/*.sass',
     fonts: 'src/fonts/**/*.*',
     img: 'src/**/*.+(png|jpg)',
-    svg: 'src/**/*.svg'
+    svg: 'src/**/*.svg',
+    video: 'src/video/*.+(mp4|mov)'
   },
   clean: './build'
 };
@@ -127,13 +129,20 @@ gulp.task('fonts:build', function() {
 
 });
 
+gulp.task('video:build', function () {
+  return gulp.src(path.src.video)
+    .pipe(gulp.dest(path.build.video))
+    .pipe(reload({stream: true}));
+});
+
 gulp.task('build', [
   'html:build',
   'js:build',
   'style:build',
   'fonts:build',
   'image:build',
-  'imageSvg:build'
+  'imageSvg:build',
+  'video:build'
 ]);
 
 gulp.task('watch', function(){
@@ -154,6 +163,9 @@ gulp.task('watch', function(){
   });
   watch([path.watch.fonts], function(event, cb) {
     gulp.start('fonts:build');
+  });
+  watch([path.watch.video], function(event, cb) {
+    gulp.start('video:build');
   });
 });
 

@@ -1,0 +1,184 @@
+.testimonial
+  +whScreen(100%, 900px)
+  padding-top: 130px
+  display: flex
+  flex-direction: column
+  align-content: center
+  justify-content: flex-start
+
+
+  &__slider
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+    position: relative
+    width: 100%
+
+
+  input[type=radio]
+    display: none
+
+  &__slide-pre,
+  &__slide-next
+    position: absolute
+    top: 20%
+    transform: translateY(-20%)
+    width: 35px
+    height: 35px
+    //background: url("../img/testimonial/arrow.svg") center center no-repeat
+    //background-size: cover
+    border: 1px solid #969696
+    border-radius: 50%
+    cursor: pointer
+    z-index: 99
+
+    &::before,
+    &::after
+      content: ''
+      width: 3px
+      height: 15px
+      background-color: #969696
+      position: absolute
+
+
+  &__slide-pre
+    left: 0
+
+    &::before
+      top: 7px
+      right: 17px
+      transform: rotate(-135deg)
+
+    &::after
+      top: 16px
+      right: 17px
+      transform: rotate(-45deg)
+
+  &__slide-next
+    right: 0
+
+    &::before
+      top: 7px
+      left: 17px
+      transform: rotate(135deg)
+
+    &::after
+      top: 16px
+      left: 17px
+      transform: rotate( 45deg)
+
+
+  &__name
+    display: flex
+    flex-direction: column
+    position: relative
+    opacity: 0.8
+    color: #383838
+    font-size: 18px
+    font-weight: 600
+    line-height: 35px
+
+    &::before
+      content: ''
+      position: absolute
+      width: 40px
+      height: 2px
+      background-color: #5ca1f1
+      top: -15px
+      left: 50%
+      transform: translateX( -50%)
+
+
+    span
+      opacity: 0.8
+      color: #696969
+      font-size: 14px
+      font-weight: 400
+      line-height: 29px
+
+
+  &__text
+    opacity: 0.8
+    color: #383838
+    font-size: 26px
+    font-weight: 400
+    line-height: 1.5
+    width: 75%
+    min-height: 200px
+    text-align: center
+    position: relative
+    display: flex
+    align-items: center
+
+
+  &__video-wrap
+    width: 80%
+    min-height: 100%
+    outline: 1px solid red
+
+
+  &__video
+    padding: 0
+    margin: 0
+    width: 100%
+    height: 100%
+
+
+#testimonial__slider-1 .testimonial__text::before
+  content: '"'
+  transform: scaleX(-1)
+  position: absolute
+  top: -50px
+  left: 10px
+  font-style: italic
+  font-size: 55px
+
+
+
+#testimonial__slider-1,
+#testimonial__slider-2,
+#testimonial__slider-3
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: 400px
+
+//
+//#testimonial__slider-1
+//  background: url("../img/work/slide-1.png") no-repeat top right
+//#testimonial__slider-2
+//  background: url("../img/work/slide-1.png") no-repeat top right
+//#testimonial__slider-3
+//  background: url("../img/work/slide-1.png") no-repeat top right
+
+
+.testimonial__slide-btn__wrap
+  width: 180px
+  position: absolute
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  top: 190px
+  left: 50%
+  transform: translateX( -50%)
+
+.testimonial__slide-btn
+  width: 49px
+  height: 5px
+  background-color: #c9cdd1
+  cursor: pointer
+  transition: all .5s ease
+
+
+
+#testimonial__slide-1:checked ~ #testimonial__slider-1,
+#testimonial__slide-2:checked ~ #testimonial__slider-2,
+#testimonial__slide-3:checked ~ #testimonial__slider-3
+  display: flex
+
+#testimonial__slide-1:checked ~ .testimonial__slide-btn__wrap #testimonial__slide-btn-1,
+#testimonial__slide-2:checked ~ .testimonial__slide-btn__wrap #testimonial__slide-btn-2,
+#testimonial__slide-3:checked ~ .testimonial__slide-btn__wrap #testimonial__slide-btn-3
+  background-color: #f50049

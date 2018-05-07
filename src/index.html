@@ -77,53 +77,152 @@
     <h2 class="work__title">See my works</h2>
 
     <div class="work__slider">
-      <h3 class="work__sub-title">I&nbsp;really like to&nbsp;look professional but also have personal flare.</h3>
+      <input type="radio" name="work__slider-input" id="work__slide-1" checked>
+      <input type="radio" name="work__slider-input" id="work__slide-2">
+      <input type="radio" name="work__slider-input" id="work__slide-3">
 
-      <input type="radio" name="slider-input" id="slide-1" checked>
-      <input type="radio" name="slider-input" id="slide-2">
-      <input type="radio" name="slider-input" id="slide-3">
-
-      <div class="slide-btn__wrap">
-        <label class="slide-btn" id="slide-btn-1" for="slide-1"></label>
-        <label class="slide-btn" id="slide-btn-2" for="slide-2"></label>
-        <label class="slide-btn" id="slide-btn-3" for="slide-3"></label>
+      <div class="work__slide-btn__wrap">
+        <label class="work__slide-btn" id="work__slide-btn-1" for="work__slide-1"></label>
+        <label class="work__slide-btn" id="work__slide-btn-2" for="work__slide-2"></label>
+        <label class="work__slide-btn" id="work__slide-btn-3" for="work__slide-3"></label>
       </div>
 
       <div id="work__slider-1">
+        <h3 class="work__sub-title">I&nbsp;really like to&nbsp;look professional but also have personal flare.</h3>
         <p class="work__text">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
           sed diam nonummy nibh euismod tincidunt ut&nbsp;laoreet dolore magna aliquam erat volutpat.
           Ut&nbsp;wisi enim ad&nbsp;min tation ullamcorper suscipit lobortis nisl
         </p>
-        <img class="slide-img" src="img/work/slide-1.png" alt="macbook and iphone">
       </div>
 
       <div id="work__slider-2">
+        <h3 class="work__sub-title">I&nbsp;really like to&nbsp;look professional.</h3>
         <p class="work__text">
           Lorem ipsum dolor sit ame t, consectetur adipisicing elit. Deleniti eos praesentium qui vitae?
         </p>
-        <img class="slide-img" src="img/work/slide-1.png" alt="macbook and iphone">
       </div>
 
       <div id="work__slider-3">
+        <h3 class="work__sub-title">I&nbsp;reall have personal flare.</h3>
         <p class="work__text">
           Lorem ipsum dolor.
         </p>
-        <img class="slide-img" src="img/work/slide-1.png" alt="macbook and iphone">
       </div>
     </div>
 
   </div>
 </section>
 
-<!--<section class="work2">-->
-  <!--<p class="promo__text">-->
-    <!--On&nbsp;a&nbsp;red carpet, you really want to&nbsp;feel your best,-->
-    <!--so&nbsp;to&nbsp;work with a&nbsp;designer who will shape-->
-    <!--a&nbsp;dress to&nbsp;your figure and take into consideration your opinions-->
-    <!--is&nbsp;really a&nbsp;blessing.-->
-  <!--</p>-->
-<!--</section>-->
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial__slider">
+      <input type="radio" name="testimonial__slider-input" id="testimonial__slide-1" checked>
+      <input type="radio" name="testimonial__slider-input" id="testimonial__slide-2">
+      <input type="radio" name="testimonial__slider-input" id="testimonial__slide-3">
+
+      <!--<div class="testimonial__slide-btn__wrap">-->
+        <!--<label class="testimonial__slide-btn" id="testimonial__slide-btn-1" for="testimonial__slide-1"></label>-->
+        <!--<label class="testimonial__slide-btn" id="testimonial__slide-btn-2" for="testimonial__slide-2"></label>-->
+        <!--<label class="testimonial__slide-btn" id="testimonial__slide-btn-3" for="testimonial__slide-3"></label>-->
+      <!--</div>-->
+
+      <div id="testimonial__slider-1">
+        <label class="testimonial__slide-pre" for="testimonial__slide-3"></label>
+        <label class="testimonial__slide-next" for="testimonial__slide-2"></label>
+
+        <p class="testimonial__text">
+          On&nbsp;a&nbsp;red carpet, you really want to&nbsp;feel your best,
+          so&nbsp;to&nbsp;work with a&nbsp;designer who will shape
+          a&nbsp;dress to&nbsp;your figure and take into consideration your opinions
+          is&nbsp;really a&nbsp;blessing.
+        </p>
+        <p class="testimonial__name">
+          Antonia jore
+          <span>SR. Market Analyst</span>
+        </p>
+        <div class="testimonial__video-wrap">
+          <video class="testimonial__video" src="video/video-1.mov" controls></video>
+        </div>
+      </div>
+
+
+      <div id="testimonial__slider-2">
+        <label class="testimonial__slide-pre" for="testimonial__slide-1"></label>
+        <label class="testimonial__slide-next" for="testimonial__slide-3"></label>
+
+        <p class="testimonial__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis culpa cumque distinctio doloribus dolorum est eum excepturi, exercitationem facere molestias necessitatibus odit perferendis quas quisquam ratione repellendus similique soluta!
+        </p>
+        <p class="testimonial__name">
+          Antonia jore 2
+          <span>SR. Market Analyst2</span>
+        </p>
+        <div class="testimonial__video-wrap">
+          <video class="testimonial__video" src="video/video-2.mp4" controls></video>
+        </div>
+      </div>
+
+
+      <div id="testimonial__slider-3">
+        <label class="testimonial__slide-pre" for="testimonial__slide-2"></label>
+        <label class="testimonial__slide-next" for="testimonial__slide-1"></label>
+
+        <p class="testimonial__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ipsum quo sapiente sequi unde ut vero.
+        </p>
+        <p class="testimonial__name">
+          Antonia jore 3
+          <span>SR. Market Analyst3</span>
+        </p>
+        <div class="testimonial__video-wrap">
+          <video id="video-3" class="testimonial__video" src="video/video-3.mp4" controls></video>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="Contact">
+  <div class="container">
+    <h2 class="contacts__title">Contacts</h2>
+    <div class="contacts__wrap">
+      <p class="contacts__text">I really like to look professional but also have personal flare.</p>
+      <div class="btn  contacts__btn">Let’s talk</div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="page-footer">
+  <div class="container">
+    <nav class="page-nav">
+      <div class="nav__logo">
+        <a href="/" class="logo__link">Alexandra</a>
+        <span class="logo__description">Hotline- 8800 1781 145 245</span>
+      </div>
+      <ul class="nav__list">
+        <li class="nav__list-link"><a href="#Work">Work</a></li>
+        <li class="nav__list-link"><a href="#About">About</a></li>
+        <li class="nav__list-link"><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-footer__wrap">
+      <div class="copyright">Designed by @Junaed. All rights reserved.</div>
+      <ul class="social">
+        <li class="social__item"><a target="_blank" href="fb" class="social__link">fb</a></li>
+        <li class="social__item"><a target="_blank" href="p" class="social__link">p</a></li>
+        <li class="social__item"><a target="_blank" href="tw" class="social__link">tw</a></li>
+        <li class="social__item"><a target="_blank" href="in" class="social__link">in</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
 <script src="../js/index.js"></script>
 </body>
 </html>
