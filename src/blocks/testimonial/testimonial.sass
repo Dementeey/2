@@ -113,10 +113,41 @@
 
 
   &__video-wrap
-    width: 80%
+    width: 100%
     min-height: 100%
-    outline: 1px solid red
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    overflow: hidden
 
+  &__video-play-btn
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 80px
+    height: 80px
+    background: #fff url("../img/testimonial/play.svg") no-repeat 60% 50%
+    background-size: 50% 50%
+    border-radius: 50%
+    cursor: pointer
+    z-index: 2
+    transition: 5.5s
+
+
+  &__video-pause-btn
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: #ff4
+    cursor: pointer
+    top: 0
+    left: 0
+    z-index: 1
+    opacity: 0
+    display: none
 
   &__video
     padding: 0
