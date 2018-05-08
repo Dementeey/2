@@ -16,7 +16,6 @@
     background-color: #fff
     opacity: 0.2
 
-
 .nav__logo
   display: flex
   align-items: center
@@ -46,6 +45,59 @@
   font-size: 18px
   font-weight: 400
 
+.burger__wrap
+  display: none
+
+@media(max-width: 800px)
+  .burger__wrap
+    display: flex
+    align-items: center
+    cursor: pointer
+    width: 25px
+    height: 25px
+    margin-top: -3px
+
+  .burger
+    width: 25px
+    height: 2px
+    background-color: #fff
+    position: relative
+    transition: .4s
+
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      width: 25px
+      height: 2px
+      background-color: #fff
+      left: 0
+      transition: .8s
+
+    &::before
+      top: -7px
+    &::after
+      top: 7px
+
+.burger--active
+  .burger
+    background-color: transparent
+    &::before
+      top: 50%
+      left: 0
+      transform: translateY(-50%) rotate(45deg)
+
+    &::after
+      top: 50%
+      left: 0
+      transform: translateY(-50%) rotate(-45deg)
+
+.burger--active .nav__list
+  opacity: 1
+
+.logo__description
+  font-size: 0.8em
+
 .nav__list
   list-style-type: none
   display: flex
@@ -62,3 +114,56 @@
 
     &:hover
       color: #00ffff
+
+
+@media(max-width: 800px)
+  .nav__list
+    opacity: 0
+    background-color: #fff
+    transition: 0.5s
+    position: absolute
+    bottom: -115px
+    right: 0
+    flex-direction: column
+    padding: 0
+    min-height: 100px
+    min-width: 200px
+    border-radius: 3px
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.2)
+
+    &-link
+      margin-left: 0
+      box-shadow: 0 1px 3px rgba(0,0,0, 0.05)
+      margin-bottom: -2px
+      padding: 5px 0
+      text-align: center
+      display: block
+
+      a
+        color: #00ffff
+        width: 100%
+        height: 100%
+        display: block
+
+
+
+@media(max-width: 440px)
+  .nav__list
+    width: 100%
+    bottom: -135px
+    &-link
+      padding: 10px 0
+
+@media(max-width: 400px)
+  .nav__logo
+    flex-direction: column
+
+  .burger__wrap
+    position: absolute
+    top: 25px
+    right: 10px
+  .logo__link
+    font-size: 36px
+
+    &::after
+      display: none

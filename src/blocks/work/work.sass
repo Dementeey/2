@@ -59,6 +59,7 @@
   display: none
   flex-direction: column
 
+
 #work__slider-1
   background: url("../img/work/slide-1.png") no-repeat top right
 #work__slider-2
@@ -94,3 +95,15 @@
 #work__slide-3:checked ~ .work__slide-btn__wrap #work__slide-btn-3
   background-color: #5ca1f1
 
+@media(max-width: 1300px)
+  .work__slider
+    display: flex
+    width: 100vw
+    margin-left: 10%
+  #work__slider-1
+    background: url(../img/work/slide-1.png) no-repeat 70% 0%
+
+  #work__slider-2
+    background: url(../img/work/slide-1.png) no-repeat 70% 0%
+  #work__slider-3
+    background: url(../img/work/slide-1.png) no-repeat 70% 0%

@@ -5,3 +5,10 @@ body
 
 .container
   +getContainer(15%, 5%, 80%)
+  max-width: 1300px
+
+  @media(max-width: 1280px)
+    +getContainer(5%, 5%, 90%)
+
+  @media(max-width: 800px)
+    +getContainer(5%, 5%, 90%)
