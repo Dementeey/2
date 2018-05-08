@@ -17,14 +17,18 @@ function videoPlayBtn() {
 
   }
   if (vid.play()) {
-    playBtn.style.display = 'none'
+    // playBtn.style.display = 'none'
+    playBtn.style.opacity = 0;
+    playBtn.style.zIndex = -1;
   }
 }
 
 function videoPauseBtn() {
   if (!vid.paused) {
     vid.pause();
-    playBtn.style.display = 'block'
+    // playBtn.style.display = 'block'
+    playBtn.style.opacity = 1;
+    playBtn.style.zIndex = 2;
   }
 
   if (vid.paused) {
