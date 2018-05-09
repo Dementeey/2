@@ -1,5 +1,4 @@
 .page-footer
-  background-color: #00ffff
   width: 100%
   min-height: 211px
   background-color: #599cea
@@ -54,3 +53,45 @@
     height: 100%
     cursor: pointer
     text-decoration: none
+
+
+@media(max-width: 800px)
+  .page-footer
+    position: relative
+
+  .page-footer__wrap
+    align-items: center
+    justify-content: center
+    margin-top: 30px
+
+  .social
+    position: absolute
+    top: 28px
+    right: 5%
+
+@media(max-width: 550px)
+  .page-footer__wrap
+    flex-direction: column-reverse
+    align-items: center
+    justify-content: center
+    margin-top: 30px
+  .social
+    margin-bottom: 20px
+    position: static
+
+@media(max-width: 400px)
+  .page-footer
+    position: relative
+
+  .page-footer__wrap
+    align-items: center
+    justify-content: center
+    margin-top: 30px
+
+  .social
+    justify-content: space-evenly
+    position: absolute
+    top: 28px
+    right: 5%
+  .copyright
+    text-align: center

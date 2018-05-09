@@ -3,14 +3,11 @@
   padding-bottom: 176px
 
   &__title
-    color: #333333
     font-size: 55px
     font-weight: 600
     display: flex
     justify-content: flex-start
     color: #383838
-    font-size: 55px
-    font-weight: 600
     position: relative
 
     &::before
@@ -47,3 +44,39 @@
       position: absolute
       top: 15px
       right: 20%
+
+
+@media(max-width: 800px)
+  .contacts
+    padding-top: 0
+    padding-bottom: 120px
+  .contacts__wrap
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin: 0
+  .contacts__text
+    margin-bottom: 50px
+    max-width: 80%
+
+  .contacts__btn
+    width: 65%
+
+@media(max-width: 400px)
+  .contacts__wrap
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin: 0
+  .contacts__title
+    font-size: 36px
+    &::before
+      top: 50px
+      left: 35px
+
+  .contacts__text
+    font-size: 22px
+
+
+  .contacts__btn
+    width: 75%

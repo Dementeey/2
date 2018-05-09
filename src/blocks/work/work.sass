@@ -98,12 +98,54 @@
 @media(max-width: 1300px)
   .work__slider
     display: flex
-    width: 100vw
-    margin-left: 10%
-  #work__slider-1
-    background: url(../img/work/slide-1.png) no-repeat 70% 0%
+    align-items: center
+    width: 100%
+    margin: 0
 
-  #work__slider-2
-    background: url(../img/work/slide-1.png) no-repeat 70% 0%
+  #work__slider-1,
+  #work__slider-2,
   #work__slider-3
-    background: url(../img/work/slide-1.png) no-repeat 70% 0%
+    min-width: 80%
+    background: url(../img/work/slide-1.png) no-repeat 100% 0%
+    background-size: 50% 55%
+  .work__slide-btn__wrap
+    transform: translate(-50%,10%)
+
+@media(max-width: 800px)
+  .work__title
+    font-size: 38px
+
+    &::before
+      top: 79px
+      left: 125px
+  .work__sub-title
+    max-width: 80%
+  .work__text
+    width: 80%
+
+
+  #work__slider-1,
+  #work__slider-2,
+  #work__slider-3
+    text-align: center
+    min-width: 80%
+    align-items: center
+    background: url(../img/work/slide-1.png) no-repeat 30% 130%
+    background-size: 80%
+
+  .work__slide-btn__wrap
+    bottom: -50px
+    transform: translate(-50%, 0)
+
+@media(max-width: 550px)
+  .work__sub-title
+    font-size: 24px
+  #work__slider-1,
+  #work__slider-2,
+  #work__slider-3
+    text-align: center
+    min-width: 80%
+    align-items: center
+    background: url(../img/work/slide-1.png) no-repeat 30% 100%
+    background-size: 80%
+
